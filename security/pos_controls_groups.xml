@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="group_pos_controls_shop_floor" model="res.groups">
+        <field name="name">POS Shop Floor</field>
+    </record>
+
+    <record id="group_pos_controls_cashier" model="res.groups">
+        <field name="name">POS Cashier</field>
+        <field name="implied_ids" eval="[(4, ref('mobipine_odoo_pos_controls.group_pos_controls_shop_floor'))]"/>
+    </record>
+
+    <record id="group_pos_controls_supervisor" model="res.groups">
+        <field name="name">POS Supervisor</field>
+        <field name="implied_ids" eval="[(4, ref('mobipine_odoo_pos_controls.group_pos_controls_cashier'))]"/>
+    </record>
+
+    <record id="group_pos_controls_manager" model="res.groups">
+        <field name="name">POS Manager</field>
+        <field name="implied_ids" eval="[(4, ref('mobipine_odoo_pos_controls.group_pos_controls_supervisor'))]"/>
+    </record>
+</odoo>
