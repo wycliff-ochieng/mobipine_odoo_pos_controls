@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_employee_form_pos_controls" model="ir.ui.view">
+        <field name="name">hr.employee.form.pos.controls</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//sheet//group" position="inside">
+                <group string="POS Permissions" name="pos_permissions" groups="point_of_sale.group_pos_user">
+                    <field name="pos_can_process_payment"/>
+                    <field name="pos_can_create_orders"/>
+                    <field name="pos_can_apply_discounts"/>
+                    <field name="pos_can_override_price"/>
+                    <field name="pos_can_void_orders"/>
+                    <field name="pos_can_process_refunds"/>
+                    <field name="pos_can_open_close_session"/>
+                    <field name="pos_can_view_reports"/>
+                    <field name="pos_can_manage_customers"/>
+                    <field name="pos_can_cash_in_out"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
