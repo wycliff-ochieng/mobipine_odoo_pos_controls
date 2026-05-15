@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pos_control_audit_manager,pos.control.audit manager,model_pos_control_audit,mobipine_odoo_pos_controls.group_pos_controls_manager,1,1,1,1
+access_pos_control_audit_user,pos.control.audit user,model_pos_control_audit,base.group_user,0,0,1,0
